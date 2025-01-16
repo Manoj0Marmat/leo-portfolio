@@ -1,10 +1,10 @@
-<div class="flex flex-col h-screen">
+<div class="flex flex-col h-[75vh]">
   <!-- Header -->
   <header class="absolute top-0 left-0 p-4 z-10">
-    <!-- back-button.component.html -->
+    <!-- Back Button -->
     <button
       (click)="goBack()"
-      class="px-4 py-2 text-5xl font-bold text-gray-300 hover:text-gray-500"
+      class="px-4 py-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-300 hover:text-gray-500"
     >
       &#8592;
     </button>
@@ -12,13 +12,15 @@
 
   <!-- Main Content -->
   <div
-    class="flex flex-col flex-grow items-center justify-start overflow-y-auto p-8 pt-16"
+    class="flex flex-col flex-grow items-center justify-start overflow-y-auto p-8 pt-24"
   >
-    <main class="max-w-3xl w-full text-center">
-      <h1 class="text-4xl font-bold text-gray-200 mb-4">
+    <main class="max-w-3xl w-full">
+      <!-- Introduction -->
+      <h1 class="text-4xl font-bold text-gray-200 mb-4 text-center">
         Welcome to My Portfolio!
       </h1>
-      <p class="text-gray-300 leading-relaxed mb-6">
+
+      <p class="text-gray-300 leading-relaxed mb-8 text-center">
         I’m <strong>Manoj Dilip Marmat</strong>, a passionate and results-driven
         <span class="text-blue-500 font-semibold"
           >.NET Full-Stack Developer</span
@@ -32,23 +34,56 @@
         <span class="text-blue-500">JavaScript</span>, and
         <span class="text-blue-500">TypeScript</span>.
       </p>
-      <p class="text-gray-300 leading-relaxed mb-6">
-        My ability to deliver robust, maintainable solutions is complemented by
-        my understanding of
-        <strong>Agile methodologies</strong> and a comprehensive grasp of the
-        <span class="text-blue-500">Software Development Life Cycle (SDLC)</span
-        >.
-      </p>
 
-      <p class="text-gray-300 leading-relaxed mb-6">
-        My commitment to continuous improvement is demonstrated by my
-        participation in open-source contributions like
-        <span class="font-semibold text-blue-500">Hacktoberfest 2022</span>,
-        where I earned a badge for contributing to the community. I’ve also
-        pursued professional growth through certifications and by engaging with
-        cutting-edge technologies.
-      </p>
-      <p class="text-gray-300 leading-relaxed">
+      <!-- Who Am I -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-200 mb-4">Who Am I?</h2>
+        <p class="text-gray-300 leading-relaxed">
+          I'm a problem solver, a continuous learner, and a technology
+          enthusiast. I'm based in India and graduated with a Bachelor's degree
+          in Computer Science & Engineering from
+          <span class="font-semibold">Sant Gadge Baba Amravati University</span>
+          with a GPA of 8.5.
+        </p>
+      </section>
+
+      <!-- What I’ve Done -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-200 mb-4">
+          What I’ve Done
+        </h2>
+        <p class="text-gray-300 leading-relaxed">
+          Over the years, I’ve worked on multiple projects that span across
+          different domains, including building scalable APIs, designing
+          e-commerce platforms, and automating business processes. I’ve also
+          contributed to open-source projects like
+          <span class="font-semibold text-blue-500">Hacktoberfest 2022</span>,
+          where I earned a badge for my contributions to the community.
+        </p>
+      </section>
+
+      <!-- My Goal -->
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold text-gray-200 mb-4">My Goal</h2>
+        <p class="text-gray-300 leading-relaxed">
+          My goal is to continue improving as a Full-Stack Developer and
+          contribute to meaningful, scalable software. I aspire to work on
+          larger projects, collaborate with talented teams, and leverage my
+          skills to build innovative solutions.
+        </p>
+      </section>
+
+      <!-- What’s Next -->
+      <section>
+        <h2 class="text-3xl font-semibold text-gray-200 mb-4">What’s Next?</h2>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          I am eager to explore new opportunities that allow me to tackle
+          challenging problems, work with the latest technologies, and make a
+          positive impact in the tech world.
+        </p>
+      </section>
+
+      <p class="text-gray-300 leading-relaxed text-center">
         Let’s connect and explore how my expertise can contribute to building
         innovative and scalable solutions.
       </p>
