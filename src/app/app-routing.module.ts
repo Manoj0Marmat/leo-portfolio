@@ -12,11 +12,12 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'certificates', component: CertificatesComponent },
-  { path: '', redirectTo: '/profile', pathMatch: 'full' } // Default route
+  { path: '', redirectTo: '/profile', pathMatch: 'full' },
+  { path: '**', redirectTo: '/profile' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
