@@ -1,0 +1,35 @@
+/* Glass Effect Container */
+.glass-effect-container {
+  background: rgba(255, 255, 255, 0.1); /* Slight white background with 10% opacity */
+  backdrop-filter: blur(8px); /* Apply blur effect to create a frosted glass effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.6); /* Subtle shadow and glowing effect */
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+
+  /* Add new styles */
+  border: 1px solid #3f3f46; /* Dark bottom border */
+  background-color: rgba(0, 0, 0, 0.1); /* Slightly dark background color */
+  background-size: 200% 100%; /* Background size for movement */
+//  animation: shineWaveAnimation 8s infinite linear; /* Adjusted duration for smooth wave effect */
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 47%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 53%); /* Smaller shine wave width */
+  will-change: background-position; /* Optimizing animation performance */
+}
+
+/* Define the shine wave effect */
+@keyframes shineWaveAnimation {
+  0% {
+    background-position: 150% 0%; /* Start from right */
+    background-size: 200% 100%; /* Background size for movement */
+  }
+  40% {
+    background-position: -200% 0%; /* End at left */
+    background-size: 0%; /* Background size for movement */
+  }
+  100% {
+    background-position: 120% 0%; /* Start from right */
+    background-size: 0%; /* Background size for movement */
+  }
+}
