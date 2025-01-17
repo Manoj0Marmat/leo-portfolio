@@ -15,21 +15,21 @@
     class="flex flex-col flex-grow items-center justify-start overflow-y-auto p-8"
   >
     <main class="max-w-3xl w-full mx-auto px-4">
-      <div class="flex flex-wrap justify-evenly">
+      <div class="flex flex-wrap justify-evenly md:ml-[8vw] lg:ml-[8vw]">
         <!-- Section 1 -->
         <div
           class="flex-1 min-w-[100%] sm:min-w-[40%] pb-10"
           *ngFor="let category of skillCategories"
         >
           <h2 class="text-lg font-bold mb-1">{{ category.title }}:</h2>
-          <ul *ngFor="let skill of category.skills">
-            <li class="flex items-center">
+          <ul>
+            <li class="flex items-center" *ngFor="let skill of category.skills">
               <span class="relative flex h-3 w-3">
                 <span
-                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-black via-white to-black opacity-50"
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50"
                 ></span>
                 <span
-                  class="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-r from-white via-yellow-950 to-white"
+                  class="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
                 ></span>
               </span>
               <span class="ml-3">{{ skill }}</span>
