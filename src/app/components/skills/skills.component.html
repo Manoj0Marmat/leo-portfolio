@@ -1,1 +1,42 @@
-<p>skills works!</p>
+<div class="flex flex-col h-[75vh]">
+  <!-- Header -->
+  <header class="absolute top-0 left-0 p-4 z-10">
+    <!-- Back Button -->
+    <button
+      (click)="goBack()"
+      class="px-4 py-2 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-300 hover:text-gray-500"
+    >
+      &#8592;
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <div
+    class="flex flex-col flex-grow items-center justify-start overflow-y-auto p-8"
+  >
+    <main class="max-w-3xl w-full mx-auto px-4">
+      <div class="flex flex-wrap justify-evenly">
+        <!-- Section 1 -->
+        <div
+          class="flex-1 min-w-[100%] sm:min-w-[40%] pb-10"
+          *ngFor="let category of skillCategories"
+        >
+          <h2 class="text-lg font-bold mb-1">{{ category.title }}:</h2>
+          <ul *ngFor="let skill of category.skills">
+            <li class="flex items-center">
+              <span class="relative flex h-3 w-3">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gradient-to-r from-black via-white to-black opacity-50"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-r from-white via-yellow-950 to-white"
+                ></span>
+              </span>
+              <span class="ml-3">{{ skill }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
