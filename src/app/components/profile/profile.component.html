@@ -36,7 +36,8 @@
       </div>
       <div class="flex flex-col items-center mt-6">
         <button
-          class="download-btn flex items-center shadow-inner shadow-black/50 space-x-2 py-2 px-4 bg-gray-400 text-black font-bold rounded-lg border-2 border-transparent hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50"
+          (click)="downloadResume()"
+          class="download-btn flex drop-shadow-[0_0_10px_rgba(37,211,102,0.3)] items-center shadow-lg shadow-black/50 space-x-2 py-2 px-4 bg-gray-400 text-black font-bold rounded-lg border-2 border-transparent hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50"
         >
           <svg
             width="30px"

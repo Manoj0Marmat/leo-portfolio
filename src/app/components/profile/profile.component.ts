@@ -14,4 +14,13 @@ export class ProfileComponent {
     { text: 'Projects', link: '/projects' },
     { text: 'Certificates', link: '/certificates' },
   ];
+
+  // Function to trigger resume download
+  downloadResume() {
+    const link = document.createElement('a');
+    link.href =
+      'https://raw.githubusercontent.com/Manoj0Marmat/Doc/refs/heads/main/ManojMarmat_Full-Stack_Developer_1.pdf'; // Replace with your GitHub raw file URL
+    link.download = 'ManojMarmat_Resume.pdf'; // Optional: Specify a custom filename
+    link.click();
+  }
 }
