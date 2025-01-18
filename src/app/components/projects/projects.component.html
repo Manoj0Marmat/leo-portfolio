@@ -19,7 +19,7 @@
         class="grid max-w-[26rem] sm:max-w-[52.5rem] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-6 lg:gap-y-8 xl:gap-x-8 lg:max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <li
-          class="group relative rounded-3xl border-y bg-slate-50 p-6 dark:bg-slate-800/80 dark:highlight-white/5 hover:bg-slate-100 dark:hover:bg-slate-700/50"
+          class="group relative rounded-3xl border-y bg-slate-50 p-6 dark:bg-slate-800/80 dark:highlight-white/5 hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-all duration-300"
           *ngFor="let project of projectsList"
         >
           <div
@@ -45,7 +45,7 @@
             <h2
               class="text-sm leading-6 text-slate-900 dark:text-white font-semibold group-hover:text-sky-500 dark:group-hover:text-sky-400"
             >
-              <a [href]="project.gitUrl"
+              <a [href]="project.gitUrl" target="_blank"
                 ><span class="absolute inset-0 rounded-3xl"></span
                 >{{ project.title }}</a
               >
