@@ -54,10 +54,16 @@ export class AnalyticsService {
     }
 
     // Store the updated or new device info in local storage
-    this.storeData(deviceInfo);
+    this.storeData(deviceInfo); // Send data to JSONBin
 
-    // Send data to serverless function
-    this.sendDataToJsonBin(deviceInfo);
+    this.sendDataToJsonBin(deviceInfo).subscribe({
+      next: (response) => {
+        console.log('Data successfully sent to JSONBin:', response);
+      },
+      error: (error) => {
+        console.error('Error sending data to JSONBin:', error);
+      },
+    });
   }
 
   // Get stored data from localStorage (if any)
@@ -73,6 +79,7 @@ export class AnalyticsService {
 
   // Send data to JSONBin directly
   public sendDataToJsonBin(deviceInfo: any): Observable<any> {
+    console.log('inside sendDataToJsonBin');
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'X-Master-Key': this.masterKey, // Send the hashed key securely
