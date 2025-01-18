@@ -8,6 +8,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { CertificatesComponent } from './components/certificates/certificates.component';
+import { AnalyticsService } from './services/analytics.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,10 @@ import { CertificatesComponent } from './components/certificates/certificates.co
     AboutMeComponent,
     ProjectsComponent,
     SkillsComponent,
-    CertificatesComponent
+    CertificatesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [AnalyticsService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
