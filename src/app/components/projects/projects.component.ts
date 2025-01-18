@@ -19,8 +19,6 @@ export class ProjectsComponent {
     },
     {
       title: 'Bulky MVC E-commerce',
-      imgUrl: 'assets/projects/bulky-mvc.png',
-      vidUrl: 'assets/projects/bulky-mvc.gif',
       gitUrl: 'https://github.com/Manoj0Marmat/Bulky_MVC',
       type: 'E-commerce Platform with MVC Architecture',
     },
@@ -40,8 +38,6 @@ export class ProjectsComponent {
     },
     {
       title: 'User Management Web App',
-      imgUrl: 'assets/projects/backend.png',
-      vidUrl: 'assets/projects/backend.gif',
       gitUrl: 'https://github.com/Manoj0Marmat/web-application-task',
       type: 'Authentication & Profile Management',
     },
