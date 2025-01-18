@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,43 @@ import { Router } from '@angular/router';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  range: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  projectsList = [
+    {
+      title: 'Interactive Portfolio',
+      imgUrl: 'assets/projects/portfolio.png',
+      vidUrl: 'assets/projects/portfolio.gif',
+      gitUrl: 'https://github.com/Manoj0Marmat/leo-portfolio',
+      type: 'Personal Branding & Showcase',
+    },
+    {
+      title: 'Bulky MVC E-commerce',
+      imgUrl: 'assets/projects/bulky-mvc.png',
+      vidUrl: 'assets/projects/bulky-mvc.gif',
+      gitUrl: 'https://github.com/Manoj0Marmat/Bulky_MVC',
+      type: 'E-commerce Platform with MVC Architecture',
+    },
+    {
+      title: 'RPG API',
+      imgUrl: 'assets/projects/backend.png',
+      vidUrl: 'assets/projects/backend.gif',
+      gitUrl: 'https://github.com/Manoj0Marmat/dotnet-rpg',
+      type: 'Backend API for Role-Playing Game',
+    },
+    {
+      title: 'Event Management API',
+      imgUrl: 'assets/projects/backend.png',
+      vidUrl: 'assets/projects/backend.gif',
+      gitUrl: 'https://github.com/Manoj0Marmat/WebDevBackend',
+      type: 'CRUD API for Event Management',
+    },
+    {
+      title: 'User Management Web App',
+      imgUrl: 'assets/projects/backend.png',
+      vidUrl: 'assets/projects/backend.gif',
+      gitUrl: 'https://github.com/Manoj0Marmat/web-application-task',
+      type: 'Authentication & Profile Management',
+    },
+  ];
 
   constructor(private router: Router) {}
 
