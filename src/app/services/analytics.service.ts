@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; // Angular's HttpClient
+import { HttpClient, HttpHeaders } from '@angular/common/http'; // Angular's HttpClient
 import { DeviceInfo } from './analytics.model';
+import * as CryptoJS from 'crypto-js';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AnalyticsService {
-  private serverlessUrl = '/api/submitAnalytics'; // Vercel serverless function endpoint
+  private jsonBinUrl = 'https://api.jsonbin.io/v3/b'; // JSONBin endpoint
+  private masterKey =
+    '$2a$10$RCkzGoJwdAyYIiaP0YL22OU1LqVjP1lZkMY8rB0outbNb6AQSJBAK'; // Replace with the actual key
 
   constructor(private httpClient: HttpClient) {}
 
@@ -53,7 +57,7 @@ export class AnalyticsService {
     this.storeData(deviceInfo);
 
     // Send data to serverless function
-    this.sendDataToVercelFunction(deviceInfo);
+    this.sendDataToJsonBin(deviceInfo);
   }
 
   // Get stored data from localStorage (if any)
@@ -67,15 +71,13 @@ export class AnalyticsService {
     localStorage.setItem('deviceInfo', JSON.stringify(data));
   }
 
-  // Send data to the Vercel serverless function (via HttpClient)
-  private sendDataToVercelFunction(data: DeviceInfo) {
-    this.httpClient.post(this.serverlessUrl, { deviceInfo: data }).subscribe(
-      (response) => {
-        console.log('Data sent successfully:', response);
-      },
-      (error) => {
-        console.error('Error sending data:', error);
-      }
-    );
+  // Send data to JSONBin directly
+  public sendDataToJsonBin(deviceInfo: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'X-Master-Key': this.masterKey, // Send the hashed key securely
+    });
+
+    return this.httpClient.post(this.jsonBinUrl, deviceInfo, { headers });
   }
 }
