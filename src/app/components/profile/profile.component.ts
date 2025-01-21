@@ -13,6 +13,7 @@ export class ProfileComponent {
     { text: 'Skills', link: '/skills' },
     { text: 'Projects', link: '/projects' },
     { text: 'Certificates', link: '/certificates' },
+    { text: 'Contact Me', link: '/contact' },
   ];
 
   // Function to trigger resume download
