@@ -9,6 +9,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { CertificatesComponent } from './components/certificates/certificates.component';
 import { AnalyticsService } from './services/analytics.service';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectsComponent,
     SkillsComponent,
     CertificatesComponent,
+    ContactMeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AnalyticsService],
