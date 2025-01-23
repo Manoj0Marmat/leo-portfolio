@@ -46,6 +46,15 @@ export class ContactMeComponent {
       width: '50',
       height: '50',
     },
+    {
+      hrefLink: 'https://www.upwork.com/freelancers/~01e61ea9e0fd2c4048',
+      svgLink: 'assets/contacts-svg/upwork.svg',
+      animationClass:
+        'animate-pulse drop-shadow-[0_0_10px_rgba(37,211,102,0.9)]',
+      altText: 'UpWork',
+      width: '50',
+      height: '50',
+    },
   ];
   constructor(private router: Router) {}
 
