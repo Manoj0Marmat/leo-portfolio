@@ -11,6 +11,7 @@ import { CertificatesComponent } from './components/certificates/certificates.co
 import { AnalyticsService } from './services/analytics.service';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactButtonComponent } from './shared/contact-button/contact-button.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsComponent,
     CertificatesComponent,
     ContactMeComponent,
+    ContactButtonComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AnalyticsService],

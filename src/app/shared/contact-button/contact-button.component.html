@@ -1,0 +1,13 @@
+<a
+  *ngFor="let button of contactButton"
+  [href]="button.hrefLink"
+  target="_blank"
+>
+  <img
+    [src]="button.svgLink"
+    [alt]="button.altText"
+    [width]="button.width"
+    [height]="button.height"
+    [class]="button.animationClass"
+  />
+</a>
