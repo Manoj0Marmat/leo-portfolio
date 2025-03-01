@@ -13,8 +13,10 @@ export class ContactMeComponent {
     {
       hrefLink: 'https://www.linkedin.com/in/manoj-marmat',
       svgLink: 'assets/contacts-svg/linked-in.svg',
-      animationClass:
-        'animate-pulse drop-shadow-[0_0_10px_rgba(0,126,245,0.9)]',
+      animationClass: [
+        'animate-pulse',
+        'drop-shadow-[0_0_10px_rgba(0,126,245,0.9)]',
+      ],
       altText: 'Linked In',
       width: '50',
       height: '50',
@@ -22,8 +24,10 @@ export class ContactMeComponent {
     {
       hrefLink: 'https://github.com/Manoj0Marmat',
       svgLink: 'assets/contacts-svg/github.svg',
-      animationClass:
-        'animate-pulse drop-shadow-[0_0_10px_rgba(0,126,245,0.9)]',
+      animationClass: [
+        'animate-pulse',
+        'drop-shadow-[0_0_10px_rgba(0,126,245,0.9)]',
+      ],
       altText: 'Github',
       width: '50',
       height: '50',
@@ -31,8 +35,10 @@ export class ContactMeComponent {
     {
       hrefLink: 'https://wa.me/+917083955439',
       svgLink: 'assets/contacts-svg/whatsapp.svg',
-      animationClass:
-        'animate-pulse drop-shadow-[0_0_10px_rgba(37,211,102,0.9)]',
+      animationClass: [
+        'animate-pulse',
+        'drop-shadow-[0_0_10px_rgba(37,211,102,0.9)]',
+      ],
       altText: 'WhatsApp',
       width: '50',
       height: '50',
@@ -40,17 +46,21 @@ export class ContactMeComponent {
     {
       hrefLink: 'mailto:manojrajput762000@gmail.com',
       svgLink: 'assets/contacts-svg/gmail.svg',
-      animationClass:
-        'animate-pulse drop-shadow-[0_0_10px_rgba(217,48,37,0.9)]',
-      altText: 'Github',
+      animationClass: [
+        'animate-pulse',
+        'drop-shadow-[0_0_10px_rgba(217,48,37,0.9)]',
+      ],
+      altText: 'Gmail',
       width: '50',
       height: '50',
     },
     {
       hrefLink: 'https://www.upwork.com/freelancers/~01e61ea9e0fd2c4048',
       svgLink: 'assets/contacts-svg/upwork.svg',
-      animationClass:
-        'animate-pulse drop-shadow-[0_0_10px_rgba(37,211,102,0.9)]',
+      animationClass: [
+        'animate-pulse',
+        'drop-shadow-[0_0_10px_rgba(37,211,102,0.9)]',
+      ],
       altText: 'UpWork',
       width: '50',
       height: '50',

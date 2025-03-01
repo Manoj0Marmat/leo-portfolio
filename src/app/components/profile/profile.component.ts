@@ -20,7 +20,7 @@ export class ProfileComponent {
   downloadResume() {
     const link = document.createElement('a');
     link.href =
-      'https://raw.githubusercontent.com/Manoj0Marmat/Doc/refs/heads/main/ManojMarmat_Full-Stack_Developer_1.pdf'; // Replace with your GitHub raw file URL
+      'https://raw.githubusercontent.com/Manoj0Marmat/Doc/refs/heads/main/ManojMarmat_Full-Stack_Developer_2.pdf'; // Replace with your GitHub raw file URL
     link.download = 'ManojMarmat_Resume.pdf'; // Optional: Specify a custom filename
     link.click();
   }
